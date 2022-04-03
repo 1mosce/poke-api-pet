@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/poke-api-pet/static/css/main.c6bebc4e.css",
+    "main.js": "/poke-api-pet/static/js/main.e09ada6f.js",
+    "index.html": "/poke-api-pet/index.html",
+    "main.c6bebc4e.css.map": "/poke-api-pet/static/css/main.c6bebc4e.css.map",
+    "main.e09ada6f.js.map": "/poke-api-pet/static/js/main.e09ada6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6bebc4e.css",
+    "static/js/main.e09ada6f.js"
+  ]
+}
