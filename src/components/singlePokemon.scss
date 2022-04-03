@@ -1,0 +1,36 @@
+.pokemon_modal {
+  border: 1px solid firebrick;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .pokemon_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      text-transform: capitalize;
+    }
+
+    button {
+      margin-right: 48px;
+      height: 24px;
+    }
+  }
+
+  .pokemon_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .stats {
+      display: flex;
+
+      p {
+        margin-right: 5px;
+      }
+    }
+  }
+}
