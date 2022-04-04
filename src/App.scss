@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgb(146, 229, 255);
+  min-height: 100vh;
 
   .pokemon_wrapper {
     width: 100%;
@@ -15,12 +17,13 @@
       justify-content: center;
       align-items: center;
       width: 33%;
-      border: 1px solid green;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 25px;
       padding: 24px;
       text-transform: capitalize;
-
+      margin: 10px;
       @media screen and (min-width: 768px) {
-        width: 20%;
+        width: 10%;
       }
     }
   }

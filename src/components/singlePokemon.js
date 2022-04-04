@@ -4,13 +4,15 @@ import { getModal } from "./../actions";
 import { useDispatch } from "react-redux";
 import "./singlePokemon.scss";
 
-export const SinglePokemon = ({ url }) => {
+export const SinglePokemon = ({ url, loading }) => {
   const dispatch = useDispatch();
   const [pokemonName, setPokemonName] = useState();
   const [pokemonAbillities, setPokemonAbillities] = useState([]);
   const [pokemonMoves, setPokemonMoves] = useState([]);
   const [pokemonStats, setPokemonStats] = useState([]);
   const [pokemonSprites, setPokemonSprites] = useState();
+
+  let isLoading = loading;
 
   useEffect(() => {
     axios.get(url).then((res) => {
@@ -25,15 +27,17 @@ export const SinglePokemon = ({ url }) => {
   return (
     <div className="pokemon_modal">
       <div className="pokemon_title">
-        <h1>{pokemonName}</h1>
-        <img src={pokemonSprites} />
+        <div>
+          <h1>{pokemonName}</h1>
+          <img src={pokemonSprites} />
+        </div>
         <button
           onClick={() => {
             let isOpen = false;
             dispatch(getModal(isOpen));
           }}
         >
-          Close this
+          Close Modal
         </button>
       </div>
       <div className="pokemon_info">
@@ -53,9 +57,9 @@ export const SinglePokemon = ({ url }) => {
           <h3>His Moves</h3>
           {pokemonStats.map((stat, index) => (
             <div key={index} className="stats">
-              <p>{stat.base_stat}</p>
-              <p>{stat.effort}</p>
-              <p>{stat.stat.name}</p>
+              <p>Base Stat: {stat.base_stat}</p>
+              <p>Effort: {stat.effort}</p>
+              <p>Name: {stat.stat.name}</p>
             </div>
           ))}
         </div>

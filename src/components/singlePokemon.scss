@@ -1,8 +1,15 @@
 .pokemon_modal {
   border: 1px solid firebrick;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  background: rgb(197, 197, 197);
+
+  @media screen and (min-width: 768px) {
+    width: 700px;
+  }
 
   .pokemon_title {
     display: flex;
@@ -11,7 +18,13 @@
     align-items: center;
 
     h1 {
+      text-align: center;
       text-transform: capitalize;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
     }
 
     button {
@@ -22,12 +35,17 @@
 
   .pokemon_info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    text-transform: capitalize;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
 
     .stats {
       display: flex;
-
+      border: 1px solid rgb(255, 172, 172);
       p {
         margin-right: 5px;
       }
